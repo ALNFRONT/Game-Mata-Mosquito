@@ -1,0 +1,29 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Mata-mosquito</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js"></script>
+  </head>
+  <body onresize="ResponsiveAdjustStage()">
+    <div class="panel">
+      <div class="lifes">
+        <img id="v1" src="./imagens//coracao_cheio.png" />
+        <img id="v2" src="./imagens//coracao_cheio.png" />
+        <img id="v3" src="./imagens//coracao_cheio.png" />
+      </div>
+      <div class="stopwatch">Tempo restante: <span id="time"></span></div>
+    </div>
+    <script>
+      document.getElementById("time").innerHTML = timed;
+
+      var createMosquito = setInterval(function () {
+        posRandom();
+      }, createMosquitoTimed);
+    </script>
+  </body>
+</html>
